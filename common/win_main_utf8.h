@@ -19,7 +19,7 @@ static FILE *my_fopen(const char *fname, const char *mode)
     WCHAR *wname=NULL, *wmode=NULL;
     int namelen, modelen;
     FILE *file = NULL;
-    errno_t err;
+    int err;
 
     namelen = MultiByteToWideChar(CP_UTF8, 0, fname, -1, NULL, 0);
     modelen = MultiByteToWideChar(CP_UTF8, 0, mode, -1, NULL, 0);
